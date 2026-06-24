@@ -26,9 +26,11 @@ app.use(cookieParser());
 
 // ✅ CORS
 app.use(cors({
-    origin: "*", 
+    origin: [
+    "*", 
     process.env.FRONTEND_URI ,
-    "https://fashion-basket.vercel.app/",
+    "https://fashion-basket.vercel.app/"
+    ],
     credentials: true
 }));
 
